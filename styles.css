@@ -1,9 +1,9 @@
-/* Fondo con GIF */
+/* Background with GIF */
 body {
     font-family: 'MinecraftRegular', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('images/background.gif'); /* GIF animado */
+    background-image: url('images/background.gif'); /* Animated GIF */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -17,20 +17,20 @@ body {
     overflow: hidden;
 }
 
-/* Título */
+/* Title */
 #title {
     width: 100%;
     text-align: center;
     margin-top: 20px;
 }
 
-/* Imagen del título */
+/* Title Image */
 #titleImage {
     width: auto;
     height: 100px;
 }
 
-/* Contenedor de botones */
+/* Navigation buttons */
 #buttonContainer {
     display: flex;
     justify-content: center;
@@ -54,7 +54,7 @@ button:hover {
     background-color: #555;
 }
 
-/* Contenido */
+/* Content */
 .content {
     display: flex;
     justify-content: center;
@@ -93,24 +93,13 @@ select {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-#copyright p {
-    margin: 0;
-}
-
-/* 🔥 Luciérnagas */
-#fireflies-container {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-}
-
+/* Fireflies Effect */
 .firefly {
     position: absolute;
-    width: 8px;
-    height: 8px;
-    background: rgba(255, 255, 0, 0.8);
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 100, 0.8);
     border-radius: 50%;
-    box-shadow: 0
+    pointer-events: none;
+    box-shadow: 0 0 10px rgba(255, 255, 100, 1);
+}

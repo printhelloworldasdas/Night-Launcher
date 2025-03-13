@@ -15,13 +15,13 @@ body {
     height: 100vh;
 }
 
-/* Sección del título con la imagen de banner en la parte superior */
+/* Sección del título con la imagen del banner en la parte superior */
 #title {
     position: relative;
     width: 100%;
     text-align: center;
     z-index: 2; /* Asegura que el título esté sobre el fondo */
-    margin-top: 0; /* Sin margen superior, para que esté pegado al borde superior */
+    margin-top: 0; /* Sin margen superior */
 }
 
 #banner {

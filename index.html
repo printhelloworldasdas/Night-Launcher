@@ -12,8 +12,15 @@
         <h1>Game Launcher</h1>
     </div>
 
-    <!-- Main content (launcher buttons) -->
-    <div id="launcher">
+    <!-- Left-side buttons (Home, News, Servers) in a vertical column -->
+    <div id="buttonContainer">
+        <button id="homeBtn">Home</button>
+        <button id="newsBtn">News</button>
+        <button id="serversBtn">Servers</button>
+    </div>
+
+    <!-- Main content area below the buttons -->
+    <div id="launcher" class="content">
         <!-- Version Select Dropdown and Launch Button -->
         <label for="versionSelect">Select Version:</label>
         <select id="versionSelect">
@@ -23,25 +30,13 @@
         </select>
 
         <button id="launchBtn">Launch</button>
-
-        <!-- Navigation buttons -->
-        <br><br>
-        <button id="homeBtn">Home</button>
-        <button id="newsBtn">News</button>
-        <button id="serversBtn">Servers</button>
     </div>
 
     <!-- News Section -->
-    <div id="newsSection" class="hidden">
+    <div id="newsSection" class="content hidden">
         <h1>Latest News</h1>
         <p>Here is some news content about the game!</p>
         <button id="backToLauncherBtn">Back to Launcher</button>
-    </div>
-
-    <!-- Servers Section -->
-    <div id="serversSection" class="hidden">
-        <h1>Servers</h1>
-        <p>List of game servers will be here.</p>
     </div>
 
     <script src="script.js"></script>

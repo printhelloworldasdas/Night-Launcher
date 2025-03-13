@@ -23,12 +23,16 @@
     font-style: italic;
 }
 
-/* Aplicamos las fuentes a los elementos */
-body {
+/* Aplicamos la fuente a los elementos */
+body, h1, h2, h3, p, button, label, select {
     font-family: 'MinecraftRegular', sans-serif;
+}
+
+/* Background con GIF */
+body {
     margin: 0;
     padding: 0;
-    background-image: url('images/background.gif');
+    background-image: url('images/background.gif'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -48,7 +52,6 @@ body {
     margin-top: 20px;
 }
 
-/* Imagen del título */
 #titleImage {
     width: auto;
     height: 100px;
@@ -91,23 +94,22 @@ button:hover {
     display: none;
 }
 
+/* Selector de versión más grande */
 label {
     margin-bottom: 10px;
-    font-size: 22px; /* Aumentado el tamaño */
+    font-size: 20px;
     font-family: 'MinecraftItalic', sans-serif;
 }
 
-/* Selector de versión más grande */
 select {
     background-color: #333;
     color: white;
     border: 1px solid #555;
-    padding: 15px; /* Aumentado */
-    font-size: 20px; /* Aumentado */
-    width: 200px; /* Aumentado */
-    text-align: center;
+    padding: 15px;
+    font-size: 18px;
     margin-bottom: 20px;
     font-family: 'MinecraftRegular', sans-serif;
+    border-radius: 5px;
 }
 
 /* Copyright */
@@ -125,4 +127,27 @@ select {
 
 #copyright p {
     margin: 0;
+}
+
+/* Efecto de luciérnagas */
+.firefly {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 10px yellow;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+/* Efecto de partículas al hacer click */
+.particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 0 5px white;
+    pointer-events: none;
 }

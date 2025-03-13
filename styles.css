@@ -3,9 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('background-image.jpg'); /* Background for the entire page */
-    background-size: cover;
-    background-position: center;
+    background-color: #1e1e1e;  /* Just a plain background without an image */
     color: white;
     display: flex;
     flex-direction: column;
@@ -14,17 +12,27 @@ body {
     height: 100vh;
 }
 
-/* Title section with its own background */
+/* Title section with a banner image */
 #title {
-    position: absolute;
-    top: 20px;
+    position: relative;
     width: 100%;
-    text-align: center;
-    background-image: url('title-background-image.jpg'); /* Background for the title */
+    height: 200px; /* Adjust this height based on your design */
+}
+
+#banner {
+    background-image: url('banner-image.jpg'); /* Banner image behind the title */
     background-size: cover;
     background-position: center;
-    padding: 50px 0;
-    font-size: 36px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#titleImage {
+    width: 60%;  /* Adjust width of the title image */
+    max-width: 600px;  /* Optional: make the title image never exceed 600px */
 }
 
 /* Navigation buttons container (horizontal alignment) */
@@ -32,7 +40,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 20px; /* Space between buttons */
-    margin-top: 80px;
+    margin-top: 30px;
 }
 
 button {

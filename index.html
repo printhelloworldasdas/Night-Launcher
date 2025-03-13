@@ -6,101 +6,35 @@
     <title>Eaglercraft Launcher</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/3.3.0/tailwind.min.css">
     <script>
-        // Objeto de traducción
-        const translations = {
-            es: {
-                title: "Eaglercraft Launcher",
-                startButton: "Iniciar Eaglercraft",
-                home: "Inicio",
-                news: "Noticias",
-                servers: "Servidores",
-                newsTitle: "Actualizaciones y Noticias del Launcher",
-                newsContent: "Aquí podrás encontrar todas las noticias y actualizaciones sobre el Eaglercraft Launcher y los clientes.",
-                backToLauncher: "Volver al Launcher"
-            },
-            en: {
-                title: "Eaglercraft Launcher",
-                startButton: "Start Eaglercraft",
-                home: "Home",
-                news: "News",
-                servers: "Servers",
-                newsTitle: "Launcher Updates and News",
-                newsContent: "Here you will find all the news and updates about the Eaglercraft Launcher and clients.",
-                backToLauncher: "Back to Launcher"
-            },
-            fr: {
-                title: "Lanceur Eaglercraft",
-                startButton: "Lancer Eaglercraft",
-                home: "Accueil",
-                news: "Actualités",
-                servers: "Serveurs",
-                newsTitle: "Mises à jour et actualités du lanceur",
-                newsContent: "Vous trouverez ici toutes les actualités et mises à jour concernant le lanceur Eaglercraft et les clients.",
-                backToLauncher: "Retour au lanceur"
-            },
-            de: {
-                title: "Eaglercraft Launcher",
-                startButton: "Eaglercraft starten",
-                home: "Startseite",
-                news: "Nachrichten",
-                servers: "Server",
-                newsTitle: "Launcher Updates und Nachrichten",
-                newsContent: "Hier finden Sie alle Nachrichten und Updates zum Eaglercraft Launcher und den Clients.",
-                backToLauncher: "Zurück zum Launcher"
-            }
-        };
-
-        // Función para cambiar el idioma
-        function changeLanguage() {
-            const lang = document.getElementById("languageSelect").value;
-            const selectedTranslation = translations[lang];
-
-            document.getElementById("title").innerText = selectedTranslation.title;
-            document.getElementById("startButton").innerText = selectedTranslation.startButton;
-            document.getElementById("homeButton").innerText = selectedTranslation.home;
-            document.getElementById("newsButton").innerText = selectedTranslation.news;
-            document.getElementById("serversButton").innerText = selectedTranslation.servers;
-            document.getElementById("newsTitle").innerText = selectedTranslation.newsTitle;
-            document.getElementById("newsContent").innerText = selectedTranslation.newsContent;
-            document.getElementById("backToLauncher").innerText = selectedTranslation.backToLauncher;
-        }
-
-        // Función para cargar el juego
         function loadGame() {
             const version = document.getElementById("versionSelect").value;
             const script = document.createElement("script");
-            script.src = `eaglercraft-${version}.js`; // Cargar la versión seleccionada
+            script.src = `eaglercraft-${version}.js`;
             script.onload = () => {
-                startEaglercraft(); // Llamar a la función principal del juego
+                startEaglercraft();
             };
             document.body.appendChild(script);
-
             document.getElementById("startButton").classList.add("hidden");
             document.getElementById("gameContainer").classList.remove("hidden");
         }
 
-        // Mostrar la sección de noticias y ocultar la interfaz del launcher
         function showNews() {
             document.getElementById("launcherSection").classList.add("hidden");
             document.getElementById("newsSection").classList.remove("hidden");
         }
 
-        // Volver al launcher desde la sección de noticias
         function backToLauncher() {
             document.getElementById("newsSection").classList.add("hidden");
             document.getElementById("launcherSection").classList.remove("hidden");
         }
 
-        // Función para abrir la URL de los servidores
         function openURL(url) {
             window.open(url, '_blank');
         }
     </script>
     <style>
-        /* Eliminar la fuente personalizada */
         body {
             background-color: #2a2a2a;
-            background-image: url('https://www.minecraft.net/etc/designs/minecraft/img/minecraft_logo.svg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -113,7 +47,6 @@
             text-align: center;
         }
 
-        /* Contenedor principal */
         .container {
             background-color: rgba(0, 0, 0, 0.7);
             border-radius: 12px;
@@ -126,43 +59,44 @@
         }
 
         h1 {
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
             margin-top: 20px;
         }
 
-        select, button {
-            font-size: 14px;
-            padding: 10px;
-            border-radius: 5px;
+        /* Botones sin fondo ni borde */
+        .nav-button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: color 0.3s ease;
         }
 
-        button {
-            background-color: transparent;
+        .nav-button:hover {
             color: #76b947;
-            border: 2px solid #76b947;
-            transition: all 0.3s ease;
         }
 
-        button:hover {
+        /* Botón de "Iniciar Eaglercraft" con fondo verde */
+        #startButton {
             background-color: #76b947;
             color: white;
-            cursor: pointer;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            transition: background 0.3s ease;
         }
 
-        .gameContainer {
-            display: none;
+        #startButton:hover {
+            background-color: #5a9e3a;
         }
 
-        .gameCanvas {
-            border: 4px solid #76b947;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
-        }
-
+        /* Secciones ocultas */
         #newsSection {
             display: none;
         }
 
-        /* Asegurar que la sección del launcher y noticias ocupen toda la pantalla */
         #launcherSection, #newsSection {
             width: 100%;
             height: 100%;
@@ -170,27 +104,20 @@
     </style>
 </head>
 <body>
-    <!-- Contenido del launcher -->
     <div class="container text-center" id="launcherSection">
-        <h1 id="title" class="text-4xl font-bold mb-6 text-green-400">Eaglercraft Launcher</h1>
-        
-        <!-- Botones debajo del título -->
+        <h1 class="text-4xl font-bold mb-6 text-green-400">Eaglercraft Launcher</h1>
+
+        <!-- Botones de navegación sin fondo ni bordes -->
         <div class="flex justify-center space-x-6 mb-6">
-            <button id="homeButton" onclick="backToLauncher()" class="py-3 px-6 rounded-lg">
-                Inicio
-            </button>
-            <button id="newsButton" onclick="showNews()" class="py-3 px-6 rounded-lg">
-                Noticias
-            </button>
-            <button id="serversButton" onclick="openURL('https://www.eaglercraft.org/servers')" class="py-3 px-6 rounded-lg">
-                Servidores
-            </button>
+            <button class="nav-button" onclick="backToLauncher()">Inicio</button>
+            <button class="nav-button" onclick="showNews()">Noticias</button>
+            <button class="nav-button" onclick="openURL('https://www.eaglercraft.org/servers')">Servidores</button>
         </div>
-        
-        <!-- Selección de versión e idioma (solo visible en el launcher) -->
+
+        <!-- Selección de versión e idioma -->
         <div class="flex justify-center space-x-6 mb-6">
             <div>
-                <label id="versionLabel" class="block text-lg">Versión</label>
+                <label class="block text-lg">Versión</label>
                 <select id="versionSelect" class="bg-gray-700 border border-gray-600">
                     <option value="1.3">Eaglercraft 1.3</option>
                     <option value="1.5">Eaglercraft 1.5</option>
@@ -200,8 +127,8 @@
             </div>
             
             <div>
-                <label id="languageLabel" class="block text-lg">Idioma</label>
-                <select id="languageSelect" class="bg-gray-700 border border-gray-600" onchange="changeLanguage()">
+                <label class="block text-lg">Idioma</label>
+                <select id="languageSelect" class="bg-gray-700 border border-gray-600">
                     <option value="es">Español</option>
                     <option value="en">English</option>
                     <option value="fr">Français</option>
@@ -209,23 +136,24 @@
                 </select>
             </div>
         </div>
-        
-        <button id="startButton" onclick="loadGame()" class="py-3 px-6 rounded-lg text-white">
+
+        <!-- Botón de inicio del juego con fondo verde -->
+        <button id="startButton" onclick="loadGame()">
             Iniciar Eaglercraft
         </button>
-        
-        <div id="gameContainer" class="gameContainer mt-8">
-            <canvas id="gameCanvas" class="w-full h-full gameCanvas"></canvas>
+
+        <div id="gameContainer" class="mt-8 hidden">
+            <canvas id="gameCanvas" class="w-full h-full"></canvas>
         </div>
     </div>
 
     <!-- Sección de noticias -->
     <div id="newsSection" class="container text-center">
-        <h2 id="newsTitle" class="text-3xl font-bold mb-6 text-green-400">Actualizaciones y Noticias del Launcher</h2>
-        <p id="newsContent" class="text-lg mb-6">Aquí podrás encontrar todas las noticias y actualizaciones sobre el Eaglercraft Launcher y los clientes.</p>
+        <h2 class="text-3xl font-bold mb-6 text-green-400">Actualizaciones y Noticias del Launcher</h2>
+        <p class="text-lg mb-6">Aquí podrás encontrar todas las noticias y actualizaciones sobre el Eaglercraft Launcher y los clientes.</p>
 
         <!-- Botón para regresar al Launcher -->
-        <button id="backToLauncher" onclick="backToLauncher()" class="py-3 px-6 rounded-lg text-white">
+        <button onclick="backToLauncher()" class="py-3 px-6 rounded-lg text-white bg-green-600 hover:bg-green-700">
             Volver al Launcher
         </button>
     </div>

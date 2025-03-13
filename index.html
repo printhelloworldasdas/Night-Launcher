@@ -1,26 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eaglercraft Launcher</title> <!-- Título de la página web -->
+    <title>Eaglercraft Launcher</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/jpeg" href="fav.jpg"> <!-- Favicon agregado -->
 </head>
 <body>
+    <!-- Título y banner -->
     <div id="title">
         <div id="banner">
             <img src="images/logo.webp" alt="Eaglercraft Launcher" id="titleImage">
         </div>
     </div>
 
+    <!-- Botones de navegación -->
     <div id="buttonContainer">
         <button id="homeBtn">Home</button>
         <button id="newsBtn">News</button>
         <button id="serversBtn">Servers</button>
     </div>
 
+    <!-- Sección del Launcher -->
     <div id="launcher" class="content">
-        <label for="versionSelect">Select Version:</label>
+        <label for="versionSelect">Selecciona una versión:</label>
         <select id="versionSelect">
             <option value="1.2.6">1.2.6</option>
             <option value="1.3">1.3</option>
@@ -33,15 +37,15 @@
         <button id="launchBtn">Launch</button>
     </div>
 
+    <!-- Sección de Noticias -->
     <div id="newsSection" class="content hidden">
-        <h1>Latest News</h1>
-        <p>Here is some news content about the game!</p>
-        <button id="backToLauncherBtn">Back to Launcher</button>
+        <h1>Últimas Noticias</h1>
+        <p>¡Aquí irá el contenido de las noticias del juego!</p>
     </div>
 
-    <!-- Copyright at the bottom of the page -->
+    <!-- Copyright abajo -->
     <div id="copyright">
-        <p>© 2025 Im_Troller. I'm not affiliated with Mojang Studios or Microsoft.</p>
+        <p>© 2025 Im_Troller. No estoy afiliado con Mojang Studios ni Microsoft.</p>
     </div>
 
     <script src="script.js"></script>

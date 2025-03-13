@@ -4,21 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eaglercraft Launcher</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.cdnfonts.com/css/minecraft-4" rel="stylesheet">
+
+    <!-- Open Graph Meta Tags (for Discord link preview) -->
+    <meta property="og:title" content="Eaglercraft Launcher">
+    <meta property="og:description" content="🚀 The ultimate launcher for Eaglercraft! Play multiple versions, check the latest news, and join servers easily.">
+    <meta property="og:image" content="images/fav.jpg">
+    <meta property="og:url" content="https://yourusername.github.io/your-repository-name/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="images/fav.jpg">
+
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Title (Image only, no banner) -->
     <div id="title">
         <img src="images/logo.webp" alt="Eaglercraft Launcher" id="titleImage">
     </div>
 
+    <!-- Navigation Buttons -->
     <div id="buttonContainer">
         <button id="homeBtn">Home</button>
         <button id="newsBtn">News</button>
         <button id="serversBtn">Servers</button>
     </div>
 
+    <!-- Launcher Section -->
     <div id="launcher" class="content">
         <label for="versionSelect">Select a version:</label>
         <select id="versionSelect">
@@ -33,11 +46,25 @@
         <button id="launchBtn">Launch</button>
     </div>
 
+    <!-- News Section -->
     <div id="newsSection" class="content hidden">
         <h1>Latest News</h1>
-        <p>Game news will be displayed here!</p>
+        
+        <h2>🆕 Version 0.0.1 - First Release!</h2>
+        <ul>
+            <li>🚀 **Initial release** of the Eaglercraft Launcher.</li>
+            <li>🎮 Added **support for multiple versions** (1.2.6 - 1.12.2).</li>
+            <li>🌌 **Firefly effect** added for a magical experience.</li>
+            <li>✨ **Click explosion effect** for an interactive feel.</li>
+            <li>🎨 New **background GIF support** for a more dynamic look.</li>
+            <li>📰 **News section** added to keep players updated.</li>
+            <li>🔗 Quick access to **multiplayer servers**.</li>
+        </ul>
+        
+        <button id="backToLauncherBtn">Back to Launcher</button>
     </div>
 
+    <!-- Copyright Footer -->
     <div id="copyright">
         <p>© 2025 Im_Troller. Not affiliated with Mojang Studios or Microsoft.</p>
     </div>

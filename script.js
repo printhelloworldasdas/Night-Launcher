@@ -18,7 +18,7 @@ document.getElementById("serversBtn").addEventListener("click", function() {
 // Launch button: open the selected version's HTML file
 document.getElementById("launchBtn").addEventListener("click", function() {
     var selectedVersion = document.getElementById("versionSelect").value;
-    var filePath = "version/" + selectedVersion + ".html";  // Construct file path
+    var filePath = "Versions/" + selectedVersion + ".html";  // Construct file path
 
     // Open the corresponding version HTML file in a new tab
     window.open(filePath, "_blank");
@@ -57,4 +57,42 @@ function createFirefly(x, y) {
     setTimeout(() => {
         firefly.remove();
     }, 2000);
+}
+
+// ✨ Click Effect - Particle Explosion ✨
+document.addEventListener("click", (event) => {
+    createClickEffect(event.clientX, event.clientY);
+});
+
+function createClickEffect(x, y) {
+    for (let i = 0; i < 10; i++) {
+        const particle = document.createElement("div");
+        particle.classList.add("particle");
+        document.body.appendChild(particle);
+
+        particle.style.left = `${x}px`;
+        particle.style.top = `${y}px`;
+
+        const angle = Math.random() * 2 * Math.PI;
+        const speed = Math.random() * 5 + 2;
+        const velocityX = Math.cos(angle) * speed;
+        const velocityY = Math.sin(angle) * speed;
+
+        particle.animate(
+            [
+                { transform: "translate(0, 0)", opacity: 1 },
+                { transform: `translate(${velocityX * 10}px, ${velocityY * 10}px)`, opacity: 0 }
+            ],
+            {
+                duration: 800 + Math.random() * 500,
+                easing: "ease-out",
+                fill: "forwards"
+            }
+        );
+
+        // Remove particle after animation
+        setTimeout(() => {
+            particle.remove();
+        }, 1000);
+    }
 }

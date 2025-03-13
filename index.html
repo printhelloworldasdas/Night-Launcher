@@ -137,13 +137,15 @@
         }
 
         button {
-            background-color: #76b947;
-            color: #fff;
+            background-color: transparent;
+            color: #76b947;
+            border: 2px solid #76b947;
             transition: all 0.3s ease;
         }
 
         button:hover {
-            background-color: #6f9f3f;
+            background-color: #76b947;
+            color: white;
             cursor: pointer;
         }
 
@@ -174,13 +176,13 @@
         
         <!-- Botones debajo del título -->
         <div class="flex justify-center space-x-6 mb-6">
-            <button id="homeButton" onclick="backToLauncher()" class="bg-gray-700 hover:bg-gray-600 text-white py-3 px-6 rounded-lg">
+            <button id="homeButton" onclick="backToLauncher()" class="py-3 px-6 rounded-lg">
                 Inicio
             </button>
-            <button id="newsButton" onclick="showNews()" class="bg-gray-700 hover:bg-gray-600 text-white py-3 px-6 rounded-lg">
+            <button id="newsButton" onclick="showNews()" class="py-3 px-6 rounded-lg">
                 Noticias
             </button>
-            <button id="serversButton" onclick="openURL('https://www.eaglercraft.org/servers')" class="bg-gray-700 hover:bg-gray-600 text-white py-3 px-6 rounded-lg">
+            <button id="serversButton" onclick="openURL('https://www.eaglercraft.org/servers')" class="py-3 px-6 rounded-lg">
                 Servidores
             </button>
         </div>
@@ -223,7 +225,7 @@
         <p id="newsContent" class="text-lg mb-6">Aquí podrás encontrar todas las noticias y actualizaciones sobre el Eaglercraft Launcher y los clientes.</p>
 
         <!-- Botón para regresar al Launcher -->
-        <button id="backToLauncher" onclick="backToLauncher()" class="bg-gray-700 hover:bg-gray-600 text-white py-3 px-6 rounded-lg">
+        <button id="backToLauncher" onclick="backToLauncher()" class="py-3 px-6 rounded-lg text-white">
             Volver al Launcher
         </button>
     </div>

@@ -7,22 +7,18 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Sección del título con la imagen de banner detrás -->
     <div id="title">
         <div id="banner">
-            <!-- Imagen del logo (usando el archivo logo.webp) -->
             <img src="images/logo.webp" alt="Eaglercraft Launcher" id="titleImage">
         </div>
     </div>
 
-    <!-- Contenedor de botones (Home, News, Servers) en una fila horizontal -->
     <div id="buttonContainer">
         <button id="homeBtn">Home</button>
         <button id="newsBtn">News</button>
         <button id="serversBtn">Servers</button>
     </div>
 
-    <!-- Área de contenido principal (selección de versión y botón de inicio) -->
     <div id="launcher" class="content">
         <label for="versionSelect">Select Version:</label>
         <select id="versionSelect">
@@ -37,11 +33,14 @@
         <button id="launchBtn">Launch</button>
     </div>
 
-    <!-- Sección de noticias -->
     <div id="newsSection" class="content hidden">
         <h1>Latest News</h1>
         <p>Here is some news content about the game!</p>
         <button id="backToLauncherBtn">Back to Launcher</button>
+    </div>
+
+    <div id="copyright">
+        <p>© 2025 Im_Troller. No estoy afiliado con Mojang Studios ni Microsoft.</p>
     </div>
 
     <script src="script.js"></script>

@@ -3,7 +3,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1e1e1e;
+    background-image: url('background-image.jpg'); /* Background for the entire page */
+    background-size: cover;
+    background-position: center;
     color: white;
     display: flex;
     flex-direction: column;
@@ -12,11 +14,17 @@ body {
     height: 100vh;
 }
 
-/* Title styling */
+/* Title section with its own background */
 #title {
     position: absolute;
     top: 20px;
+    width: 100%;
     text-align: center;
+    background-image: url('title-background-image.jpg'); /* Background for the title */
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    font-size: 36px;
 }
 
 /* Navigation buttons container (horizontal alignment) */

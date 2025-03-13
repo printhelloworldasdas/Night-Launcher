@@ -8,7 +8,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     height: 100vh;
 }
 
@@ -16,24 +16,17 @@ body {
 #title {
     position: absolute;
     top: 20px;
-}
-
-h1 {
-    font-size: 36px;
-    margin: 0;
     text-align: center;
 }
 
-/* Main launcher section */
-#launcher, #newsSection, #serversSection {
+/* Button container (vertical alignment of buttons) */
+#buttonContainer {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    height: 100%;
+    align-items: center;
+    margin-top: 100px;
 }
 
-/* Button styling */
 button {
     background-color: #333;
     color: white;
@@ -47,6 +40,20 @@ button {
 
 button:hover {
     background-color: #555;
+}
+
+/* Main content section (for version selection and launch button) */
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+/* Hide sections initially */
+.hidden {
+    display: none;
 }
 
 label {
@@ -63,19 +70,8 @@ select {
     margin-bottom: 20px;
 }
 
-/* Hide sections initially */
-.hidden {
-    display: none;
-}
-
 /* News section styling */
 #newsSection {
-    flex-direction: column;
-    text-align: center;
-}
-
-/* Servers section styling */
-#serversSection {
     flex-direction: column;
     text-align: center;
 }

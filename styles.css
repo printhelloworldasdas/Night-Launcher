@@ -19,15 +19,16 @@
     src: url('fonts/MinecraftRegular-Bmg3.otf') format('opentype');
 }
 
-/* Estilo general para la página */
+/* Estilo general */
 body {
-    font-family: 'MinecraftRegular', sans-serif; /* Usar la fuente MinecraftRegular por defecto */
+    font-family: 'MinecraftRegular', sans-serif;
     margin: 0;
     padding: 0;
     background-image: url('images/background.jpg');
-    background-size: cover;
+    background-size: cover;  /* Que cubra toda la pantalla */
     background-position: center;
-    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-attachment: fixed;  /* No se mueva al hacer scroll */
     color: white;
     display: flex;
     flex-direction: column;
@@ -36,17 +37,14 @@ body {
     height: 100vh;
 }
 
-/* Título de la página */
+/* Título */
 #title {
-    position: relative;
     width: 100%;
     text-align: center;
-    z-index: 2;
     margin-top: 0;
 }
 
 #banner {
-    background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
 }
 
@@ -55,12 +53,12 @@ body {
     max-width: 600px;
 }
 
+/* Contenedor de botones */
 #buttonContainer {
     display: flex;
     justify-content: center;
     gap: 20px;
     margin-top: 30px;
-    z-index: 2;
 }
 
 button {
@@ -72,25 +70,20 @@ button {
     cursor: pointer;
     font-size: 16px;
     border-radius: 5px;
-    font-family: 'MinecraftRegular', sans-serif; /* Aplicar la fuente personalizada a los botones */
+    font-family: 'MinecraftRegular', sans-serif; /* Aplicar la fuente personalizada */
 }
 
 button:hover {
     background-color: #555;
 }
 
+/* Contenido */
 .content {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin-top: 20px;
-    z-index: 2;
-}
-
-#newsSection {
-    flex-direction: column;
-    text-align: center;
 }
 
 .hidden {
@@ -111,6 +104,7 @@ select {
     margin-bottom: 20px;
 }
 
+/* Copyright */
 #copyright {
     position: absolute;
     bottom: 0;
@@ -118,12 +112,10 @@ select {
     text-align: center;
     font-size: 14px;
     color: white;
-    margin-top: 40px;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
 #copyright p {
     margin: 0;
-    padding: 0;
 }

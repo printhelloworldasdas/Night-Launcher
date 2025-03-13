@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eaglercraft Launcher</title>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/3.3.0/tailwind.min.css">
     <script>
         // Objeto de traducción
@@ -113,51 +112,76 @@
         }
     </script>
     <style>
+        /* Eliminar la fuente personalizada */
         body {
-            font-family: 'Press Start 2P', cursive;
             background-color: #2a2a2a;
             background-image: url('https://www.minecraft.net/etc/designs/minecraft/img/minecraft_logo.svg');
             background-size: cover;
             background-position: center;
             color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
         }
+
+        /* Contenedor principal */
         .container {
             background-color: rgba(0, 0, 0, 0.7);
             border-radius: 12px;
             padding: 30px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
         }
+
         h1 {
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         }
+
         select, button {
-            font-family: 'Press Start 2P', cursive;
             font-size: 14px;
             padding: 10px;
             border-radius: 5px;
         }
+
         button {
             background-color: #76b947;
             color: #fff;
             transition: all 0.3s ease;
         }
+
         button:hover {
             background-color: #6f9f3f;
             cursor: pointer;
         }
+
         .gameContainer {
             display: none;
         }
+
         .gameCanvas {
             border: 4px solid #76b947;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
         }
+
         #newsSection {
             display: none;
         }
+
+        /* Asegurar que la sección del launcher y noticias ocupen toda la pantalla */
+        #launcherSection, #newsSection {
+            width: 100%;
+            height: 100%;
+        }
     </style>
 </head>
-<body class="flex items-center justify-center min-h-screen">
+<body>
+    <!-- Contenido del launcher -->
     <div class="container text-center" id="launcherSection">
         <h1 id="title" class="text-4xl font-bold mb-6 text-green-400">Eaglercraft Launcher</h1>
         <p id="description" class="text-lg mb-6">Selecciona la versión y el idioma antes de iniciar el juego.</p>

@@ -146,10 +146,22 @@ select {
     position: absolute;
     width: 6px;
     height: 6px;
-    background-color: yellow; /* Partículas amarillas */
+    background-color: yellow;
     border-radius: 50%;
-    box-shadow: 0 0 10px yellow; /* Asegura que el resplandor sea amarillo */
+    box-shadow: 0 0 15px yellow, 0 0 5px white; /* Resplandor amarillo más intenso */
     pointer-events: none;
-    opacity: 0.8;
+    opacity: 0.9; /* Más opacidad para un mejor efecto */
+    animation: particleMove 1s forwards;
 }
 
+/* Animación de movimiento para las partículas */
+@keyframes particleMove {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+}

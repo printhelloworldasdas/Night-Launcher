@@ -146,8 +146,10 @@ select {
     position: absolute;
     width: 6px;
     height: 6px;
-    background-color: yellow;
+    background-color: yellow; /* Partículas amarillas */
     border-radius: 50%;
-    box-shadow: 0 0 5px white;
+    box-shadow: 0 0 10px yellow; /* Asegura que el resplandor sea amarillo */
     pointer-events: none;
+    opacity: 0.8;
 }
+

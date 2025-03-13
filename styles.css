@@ -15,7 +15,7 @@ body {
     height: 100vh;
 }
 
-/* Sección del título con la imagen de banner (ya no necesitamos un fondo aquí) */
+/* Sección del título con la imagen del banner (ya no necesitamos un fondo aquí) */
 #title {
     position: relative;
     width: 100%;

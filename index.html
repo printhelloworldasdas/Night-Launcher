@@ -1,39 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eaglercraft Launcher</title>
-
-    <!-- Open Graph Meta Tags (for Discord link preview) -->
-    <meta property="og:title" content="Eaglercraft Launcher">
-    <meta property="og:description" content="🚀 The ultimate launcher for Eaglercraft! Play multiple versions, check the latest news, and join servers easily.">
-    <meta property="og:image" content="images/fav.jpg">
-    <meta property="og:url" content="https://yourusername.github.io/your-repository-name/">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/jpeg" href="images/fav.jpg">
-
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/jpeg" href="images/fav.jpg"> <!-- Favicon ahora en images/ -->
 </head>
 <body>
-    <!-- Title (Image only, no banner) -->
+    <!-- Título (solo la imagen sin banner) -->
     <div id="title">
         <img src="images/logo.webp" alt="Eaglercraft Launcher" id="titleImage">
     </div>
 
-    <!-- Navigation Buttons -->
+    <!-- Botones de navegación -->
     <div id="buttonContainer">
         <button id="homeBtn">Home</button>
         <button id="newsBtn">News</button>
         <button id="serversBtn">Servers</button>
     </div>
 
-    <!-- Launcher Section -->
+    <!-- Sección del Launcher -->
     <div id="launcher" class="content">
-        <label for="versionSelect">Select a version:</label>
+        <label for="versionSelect">Selecciona una versión:</label>
         <select id="versionSelect">
             <option value="1.2.6">1.2.6</option>
             <option value="1.3">1.3</option>
@@ -46,27 +35,15 @@
         <button id="launchBtn">Launch</button>
     </div>
 
-    <!-- News Section -->
+    <!-- Sección de Noticias -->
     <div id="newsSection" class="content hidden">
-        <h1>Latest News</h1>
-        
-        <h2>🆕 Version 0.0.1 - First Release!</h2>
-        <ul>
-            <li>🚀 **Initial release** of the Eaglercraft Launcher.</li>
-            <li>🎮 Added **support for multiple versions** (1.2.6 - 1.12.2).</li>
-            <li>🌌 **Firefly effect** added for a magical experience.</li>
-            <li>✨ **Click explosion effect** for an interactive feel.</li>
-            <li>🎨 New **background GIF support** for a more dynamic look.</li>
-            <li>📰 **News section** added to keep players updated.</li>
-            <li>🔗 Quick access to **multiplayer servers**.</li>
-        </ul>
-        
-        <button id="backToLauncherBtn">Back to Launcher</button>
+        <h1>Últimas Noticias</h1>
+        <p>¡Aquí irá el contenido de las noticias del juego!</p>
     </div>
 
-    <!-- Copyright Footer -->
+    <!-- Copyright abajo -->
     <div id="copyright">
-        <p>© 2025 Im_Troller. Not affiliated with Mojang Studios or Microsoft.</p>
+        <p>© 2025 Im_Troller. No estoy afiliado con Mojang Studios ni Microsoft.</p>
     </div>
 
     <script src="script.js"></script>

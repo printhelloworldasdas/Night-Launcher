@@ -1,19 +1,39 @@
+/* General styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #1e1e1e;
     color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
+/* Title styling */
+#title {
+    position: absolute;
+    top: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 0;
+    text-align: center;
+}
+
+/* Main launcher section */
 #launcher, #newsSection, #serversSection {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     flex-direction: column;
+    height: 100%;
 }
 
+/* Button styling */
 button {
     background-color: #333;
     color: white;
@@ -27,10 +47,6 @@ button {
 
 button:hover {
     background-color: #555;
-}
-
-.hidden {
-    display: none;
 }
 
 label {
@@ -47,6 +63,19 @@ select {
     margin-bottom: 20px;
 }
 
-h1 {
-    font-size: 24px;
+/* Hide sections initially */
+.hidden {
+    display: none;
+}
+
+/* News section styling */
+#newsSection {
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Servers section styling */
+#serversSection {
+    flex-direction: column;
+    text-align: center;
 }

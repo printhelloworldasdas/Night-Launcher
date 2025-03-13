@@ -1,164 +1,43 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eaglercraft Launcher</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/3.3.0/tailwind.min.css">
-    <script>
-        function loadGame() {
-            const version = document.getElementById("versionSelect").value;
-            const script = document.createElement("script");
-            script.src = `eaglercraft-${version}.js`;
-            script.onload = () => {
-                startEaglercraft();
-            };
-            document.body.appendChild(script);
-            document.getElementById("startButton").classList.add("hidden");
-            document.getElementById("gameContainer").classList.remove("hidden");
-        }
-
-        function showNews() {
-            document.getElementById("launcherSection").classList.add("hidden");
-            document.getElementById("newsSection").classList.remove("hidden");
-        }
-
-        function backToLauncher() {
-            document.getElementById("newsSection").classList.add("hidden");
-            document.getElementById("launcherSection").classList.remove("hidden");
-        }
-
-        function openURL(url) {
-            window.open(url, '_blank');
-        }
-    </script>
-    <style>
-        body {
-            background-color: #2a2a2a;
-            background-size: cover;
-            background-position: center;
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-
-        .container {
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 12px;
-            padding: 40px 60px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
-            max-width: 100%;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px; /* Menos espacio abajo del título */
-        }
-
-        /* Botones de navegación sin fondo ni bordes */
-        .nav-button {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            transition: color 0.3s ease;
-            margin-right: 30px;
-        }
-
-        .nav-button:hover {
-            color: #76b947;
-        }
-
-        /* Botón de "Iniciar Eaglercraft" con fondo verde */
-        #startButton {
-            background-color: #76b947;
-            color: white;
-            border-radius: 8px;
-            padding: 10px 20px;
-            font-size: 1.5rem;
-            font-weight: bold;
-            border: none;
-            transition: background 0.3s ease;
-            margin-top: 20px;
-        }
-
-        #startButton:hover {
-            background-color: #5a9e3a;
-        }
-
-        /* Secciones ocultas */
-        #newsSection {
-            display: none;
-        }
-
-        #launcherSection, #newsSection {
-            width: 100%;
-            height: 100%;
-        }
-
-        .google-translate {
-            position: fixed;
-            top: 10px;
-            right: 10px;
-            z-index: 9999;
-        }
-    </style>
-    <!-- Google Translate widget -->
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-            new google.translate.TranslateElement({
-                pageLanguage: 'es',
-                includedLanguages: 'es,en,fr,de',
-                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-                autoDisplay: false
-            }, 'google_translate_element');
-        }
-    </script>
-    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <title>Simple Launcher</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Google Translate widget -->
-    <div id="google_translate_element" class="google-translate"></div>
+    <div id="launcher">
+        <h1>Game Launcher</h1>
 
-    <!-- Sección del Launcher -->
-    <div class="container text-center" id="launcherSection">
-        <h1 class="text-4xl font-bold mb-6 text-green-400">Eaglercraft Launcher</h1>
+        <!-- Version Select Dropdown and Launch Button -->
+        <label for="versionSelect">Select Version:</label>
+        <select id="versionSelect">
+            <option value="1.0">Version 1.0</option>
+            <option value="1.1">Version 1.1</option>
+            <option value="1.2">Version 1.2</option>
+        </select>
 
-        <!-- Botones de navegación sin fondo ni bordes -->
-        <div class="flex justify-center mb-6">
-            <button class="nav-button" onclick="backToLauncher()">Inicio</button>
-            <button class="nav-button" onclick="showNews()">Noticias</button>
-            <button class="nav-button" onclick="openURL('https://www.eaglercraft.org/servers')">Servidores</button>
-        </div>
+        <button id="launchBtn">Launch</button>
 
-        <!-- Botón de inicio del juego con fondo verde -->
-        <button id="startButton" onclick="loadGame()">
-            Iniciar Eaglercraft
-        </button>
+        <br><br>
 
-        <div id="gameContainer" class="mt-8 hidden">
-            <canvas id="gameCanvas" class="w-full h-full"></canvas>
-        </div>
+        <button id="homeBtn">Home</button>
+        <button id="newsBtn">News</button>
+        <button id="serversBtn">Servers</button>
     </div>
 
-    <!-- Sección de noticias -->
-    <div id="newsSection" class="container text-center">
-        <h2 class="text-3xl font-bold mb-6 text-green-400">Actualizaciones y Noticias del Launcher</h2>
-        <p class="text-lg mb-6">Aquí podrás encontrar todas las noticias y actualizaciones sobre el Eaglercraft Launcher y los clientes.</p>
-
-        <!-- Botón para regresar al Launcher -->
-        <button onclick="backToLauncher()" class="py-3 px-6 rounded-lg text-white bg-green-600 hover:bg-green-700">
-            Volver al Launcher
-        </button>
+    <div id="newsSection" class="hidden">
+        <h1>Latest News</h1>
+        <p>Here is some news content about the game!</p>
+        <button id="backToLauncherBtn">Back to Launcher</button>
     </div>
+
+    <div id="serversSection" class="hidden">
+        <h1>Servers</h1>
+        <p>List of game servers will be here.</p>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

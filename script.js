@@ -13,10 +13,8 @@ document.getElementById("newsBtn").addEventListener("click", function() {
 });
 
 document.getElementById("serversBtn").addEventListener("click", function() {
-    // Show the servers section and hide the launcher
-    document.getElementById("launcher").style.display = "none";
-    document.getElementById("newsSection").classList.add("hidden");
-    document.getElementById("serversSection").classList.remove("hidden");
+    // Open the website when the servers button is clicked
+    window.open("https://servers.eaglercraft.com/", "_blank");
 });
 
 document.getElementById("backToLauncherBtn").addEventListener("click", function() {

@@ -1,9 +1,38 @@
-/* Background with GIF */
+/* Definición de fuentes personalizadas desde archivos .otf */
+@font-face {
+    font-family: 'MinecraftBold';
+    src: url('fonts/MinecraftBold-nMK1.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MinecraftBoldItalic';
+    src: url('fonts/MinecraftBoldItalic-1y1e.otf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'MinecraftItalic';
+    src: url('fonts/MinecraftItalic-R8Mo.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'MinecraftRegular';
+    src: url('fonts/MinecraftRegular-Bmg3.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Estilo general */
 body {
-    font-family: 'MinecraftRegular', sans-serif;
+    font-family: 'MinecraftRegular', sans-serif; /* Usamos la fuente MinecraftRegular por defecto */
     margin: 0;
     padding: 0;
-    background-image: url('images/background.gif'); /* Animated GIF */
+    background-image: url('images/background.gif');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -14,23 +43,22 @@ body {
     align-items: center;
     justify-content: flex-start;
     height: 100vh;
-    overflow: hidden;
 }
 
-/* Title */
+/* Título */
 #title {
     width: 100%;
     text-align: center;
     margin-top: 20px;
 }
 
-/* Title Image */
+/* Imagen del título */
 #titleImage {
     width: auto;
     height: 100px;
 }
 
-/* Navigation buttons */
+/* Contenedor de botones */
 #buttonContainer {
     display: flex;
     justify-content: center;
@@ -47,14 +75,14 @@ button {
     cursor: pointer;
     font-size: 16px;
     border-radius: 5px;
-    font-family: 'MinecraftRegular', sans-serif;
+    font-family: 'MinecraftBold', sans-serif; /* Usamos la fuente MinecraftBold para los botones */
 }
 
 button:hover {
     background-color: #555;
 }
 
-/* Content */
+/* Contenido */
 .content {
     display: flex;
     justify-content: center;
@@ -70,6 +98,7 @@ button:hover {
 label {
     margin-bottom: 10px;
     font-size: 18px;
+    font-family: 'MinecraftItalic', sans-serif; /* Usamos la fuente MinecraftItalic para las etiquetas */
 }
 
 select {
@@ -79,6 +108,7 @@ select {
     padding: 10px;
     font-size: 16px;
     margin-bottom: 20px;
+    font-family: 'MinecraftRegular', sans-serif; /* Usamos la fuente MinecraftRegular para el selector */
 }
 
 /* Copyright */
@@ -91,26 +121,9 @@ select {
     color: white;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.5);
+    font-family: 'MinecraftItalic', sans-serif; /* Usamos la fuente MinecraftItalic en el copyright */
 }
 
-/* Fireflies Effect */
-.firefly {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: rgba(255, 255, 100, 0.8);
-    border-radius: 50%;
-    pointer-events: none;
-    box-shadow: 0 0 10px rgba(255, 255, 100, 1);
-}
-
-/* Click Effect - Particles */
-.particle {
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    background-color: rgba(255, 165, 0, 0.9); /* Orange glow */
-    border-radius: 50%;
-    pointer-events: none;
-    box-shadow: 0 0 10px rgba(255, 165, 0, 1);
+#copyright p {
+    margin: 0;
 }

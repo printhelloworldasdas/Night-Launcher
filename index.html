@@ -10,9 +10,6 @@
         const translations = {
             es: {
                 title: "Eaglercraft Launcher",
-                description: "Selecciona la versión y el idioma antes de iniciar el juego.",
-                version: "Versión",
-                language: "Idioma",
                 startButton: "Iniciar Eaglercraft",
                 home: "Inicio",
                 news: "Noticias",
@@ -23,9 +20,6 @@
             },
             en: {
                 title: "Eaglercraft Launcher",
-                description: "Select the version and language before starting the game.",
-                version: "Version",
-                language: "Language",
                 startButton: "Start Eaglercraft",
                 home: "Home",
                 news: "News",
@@ -36,9 +30,6 @@
             },
             fr: {
                 title: "Lanceur Eaglercraft",
-                description: "Sélectionnez la version et la langue avant de lancer le jeu.",
-                version: "Version",
-                language: "Langue",
                 startButton: "Lancer Eaglercraft",
                 home: "Accueil",
                 news: "Actualités",
@@ -49,9 +40,6 @@
             },
             de: {
                 title: "Eaglercraft Launcher",
-                description: "Wählen Sie die Version und die Sprache aus, bevor Sie das Spiel starten.",
-                version: "Version",
-                language: "Sprache",
                 startButton: "Eaglercraft starten",
                 home: "Startseite",
                 news: "Nachrichten",
@@ -68,9 +56,6 @@
             const selectedTranslation = translations[lang];
 
             document.getElementById("title").innerText = selectedTranslation.title;
-            document.getElementById("description").innerText = selectedTranslation.description;
-            document.getElementById("versionLabel").innerText = selectedTranslation.version;
-            document.getElementById("languageLabel").innerText = selectedTranslation.language;
             document.getElementById("startButton").innerText = selectedTranslation.startButton;
             document.getElementById("homeButton").innerText = selectedTranslation.home;
             document.getElementById("newsButton").innerText = selectedTranslation.news;
@@ -125,6 +110,7 @@
             height: 100vh;
             margin: 0;
             padding: 0;
+            text-align: center;
         }
 
         /* Contenedor principal */
@@ -141,6 +127,7 @@
 
         h1 {
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            margin-top: 20px;
         }
 
         select, button {
@@ -184,8 +171,7 @@
     <!-- Contenido del launcher -->
     <div class="container text-center" id="launcherSection">
         <h1 id="title" class="text-4xl font-bold mb-6 text-green-400">Eaglercraft Launcher</h1>
-        <p id="description" class="text-lg mb-6">Selecciona la versión y el idioma antes de iniciar el juego.</p>
-
+        
         <!-- Botones debajo del título -->
         <div class="flex justify-center space-x-6 mb-6">
             <button id="homeButton" onclick="backToLauncher()" class="bg-gray-700 hover:bg-gray-600 text-white py-3 px-6 rounded-lg">
@@ -199,6 +185,7 @@
             </button>
         </div>
         
+        <!-- Selección de versión e idioma (solo visible en el launcher) -->
         <div class="flex justify-center space-x-6 mb-6">
             <div>
                 <label id="versionLabel" class="block text-lg">Versión</label>

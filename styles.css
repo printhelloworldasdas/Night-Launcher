@@ -1,13 +1,7 @@
-/* Apply Minecraft font */
-body, h1, h2, h3, p, button, label, select {
-    font-family: 'Minecraft', sans-serif;
-}
-
-/* Background with GIF */
 body {
     margin: 0;
     padding: 0;
-    background-image: url('images/background.gif'); 
+    background-image: url('images/background.gif');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -67,6 +61,20 @@ button:hover {
 
 .hidden {
     display: none;
+}
+
+label {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+select {
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
 }
 
 /* Copyright */

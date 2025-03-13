@@ -1,9 +1,9 @@
-/* General styles */
+/* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1e1e1e;  /* Just a plain background without an image */
+    background-color: #1e1e1e;  /* Fondo sin imagen para que el banner sea el centro de atención */
     color: white;
     display: flex;
     flex-direction: column;
@@ -12,33 +12,33 @@ body {
     height: 100vh;
 }
 
-/* Title section with a banner image */
+/* Sección del título con la imagen del banner */
 #title {
     position: relative;
     width: 100%;
 }
 
 #banner {
-    background-image: url('banner-image.jpg'); /* Banner image behind the title */
+    background-image: url('images/background.jpg'); /* Imagen de fondo para el banner */
     background-size: cover;
     background-position: center;
-    height: 200px; /* Adjust this height based on your design */
+    height: 200px; /* Ajusta el tamaño del banner como desees */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Title image */
+/* Imagen del título */
 #titleImage {
-    width: 60%; /* Adjust width of the title image */
-    max-width: 600px; /* Optional: make the title image never exceed 600px */
+    width: 60%; /* Ajusta el tamaño de la imagen del título */
+    max-width: 600px; /* Impide que la imagen se haga demasiado grande */
 }
 
-/* Navigation buttons container (horizontal alignment) */
+/* Contenedor de los botones de navegación (horizontal) */
 #buttonContainer {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Space between buttons */
+    gap: 20px; /* Espacio entre botones */
     margin-top: 30px;
 }
 
@@ -57,7 +57,7 @@ button:hover {
     background-color: #555;
 }
 
-/* Main content section (for version selection and launch button) */
+/* Sección de contenido principal (selección de versión y botón de inicio) */
 .content {
     display: flex;
     justify-content: center;
@@ -66,7 +66,13 @@ button:hover {
     margin-top: 20px;
 }
 
-/* Hide sections initially */
+/* Sección de noticias */
+#newsSection {
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Estilos para los elementos ocultos */
 .hidden {
     display: none;
 }
@@ -83,10 +89,4 @@ select {
     padding: 10px;
     font-size: 16px;
     margin-bottom: 20px;
-}
-
-/* News section styling */
-#newsSection {
-    flex-direction: column;
-    text-align: center;
 }

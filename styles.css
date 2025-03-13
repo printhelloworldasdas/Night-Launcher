@@ -1,34 +1,13 @@
-/* Agregar fuentes personalizadas */
-@font-face {
-    font-family: 'MinecraftBoldItalic';
-    src: url('fonts/MinecraftBoldltalic-1y1e.otf') format('opentype');
-}
-
-@font-face {
-    font-family: 'MinecraftBold';
-    src: url('fonts/MinecraftBold-nMK1.otf') format('opentype');
-}
-
-@font-face {
-    font-family: 'MinecraftItalic';
-    src: url('fonts/Minecraftltalic-R8Mo.otf') format('opentype');
-}
-
-@font-face {
-    font-family: 'MinecraftRegular';
-    src: url('fonts/MinecraftRegular-Bmg3.otf') format('opentype');
-}
-
-/* Estilo general */
+/* Fondo con GIF */
 body {
     font-family: 'MinecraftRegular', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('images/background.jpg');
-    background-size: cover;  /* Que cubra toda la pantalla */
+    background-image: url('images/background.gif'); /* Usar GIF */
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;  /* No se mueva al hacer scroll */
+    background-attachment: fixed;
     color: white;
     display: flex;
     flex-direction: column;
@@ -41,16 +20,13 @@ body {
 #title {
     width: 100%;
     text-align: center;
-    margin-top: 0;
+    margin-top: 20px;
 }
 
-#banner {
-    padding: 20px;
-}
-
+/* Imagen del título */
 #titleImage {
-    width: 60%;
-    max-width: 600px;
+    width: auto;
+    height: 100px; /* Ajusta la altura según la imagen */
 }
 
 /* Contenedor de botones */
@@ -70,7 +46,7 @@ button {
     cursor: pointer;
     font-size: 16px;
     border-radius: 5px;
-    font-family: 'MinecraftRegular', sans-serif; /* Aplicar la fuente personalizada */
+    font-family: 'MinecraftRegular', sans-serif;
 }
 
 button:hover {

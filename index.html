@@ -7,9 +7,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="launcher">
+    <!-- Title at the top -->
+    <div id="title">
         <h1>Game Launcher</h1>
+    </div>
 
+    <!-- Main content (launcher buttons) -->
+    <div id="launcher">
         <!-- Version Select Dropdown and Launch Button -->
         <label for="versionSelect">Select Version:</label>
         <select id="versionSelect">
@@ -20,19 +24,21 @@
 
         <button id="launchBtn">Launch</button>
 
+        <!-- Navigation buttons -->
         <br><br>
-
         <button id="homeBtn">Home</button>
         <button id="newsBtn">News</button>
         <button id="serversBtn">Servers</button>
     </div>
 
+    <!-- News Section -->
     <div id="newsSection" class="hidden">
         <h1>Latest News</h1>
         <p>Here is some news content about the game!</p>
         <button id="backToLauncherBtn">Back to Launcher</button>
     </div>
 
+    <!-- Servers Section -->
     <div id="serversSection" class="hidden">
         <h1>Servers</h1>
         <p>List of game servers will be here.</p>

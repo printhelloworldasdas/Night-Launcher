@@ -1,97 +1,85 @@
-/* Fondo con GIF */
+/* Estilos generales */
 body {
-    font-family: 'MinecraftRegular', sans-serif;
     margin: 0;
-    padding: 0;
-    background-image: url('images/background.gif'); /* Usar GIF */
+    font-family: 'MinecraftRegular', sans-serif;
+    background: url("images/background.gif") no-repeat center center fixed;
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    overflow: hidden;
     color: white;
+    text-align: center;
+}
+
+/* Contenedor */
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     height: 100vh;
 }
 
 /* Título */
-#title {
-    width: 100%;
-    text-align: center;
+.title img {
+    max-width: 400px;
     margin-top: 20px;
 }
 
-/* Imagen del título */
-#titleImage {
-    width: auto;
-    height: 100px; /* Ajusta la altura según la imagen */
-}
-
-/* Contenedor de botones */
-#buttonContainer {
+/* Menú de navegación */
+.menu {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 30px;
+    gap: 15px;
+    margin: 20px;
 }
 
-button {
-    background-color: #333;
+.menu button {
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid white;
     color: white;
-    border: 1px solid #555;
-    padding: 15px 25px;
-    margin: 10px;
+    font-size: 18px;
+    padding: 10px 20px;
     cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-    font-family: 'MinecraftRegular', sans-serif;
+    font-family: 'MinecraftBold', sans-serif;
 }
 
-button:hover {
-    background-color: #555;
+.menu button:hover {
+    background: white;
+    color: black;
 }
 
-/* Contenido */
-.content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 20px;
+/* Secciones */
+.section {
+    display: none;
+}
+
+.section h2 {
+    font-size: 24px;
+}
+
+#launcher {
+    display: block;
 }
 
 .hidden {
     display: none;
 }
 
-label {
-    margin-bottom: 10px;
-    font-size: 18px;
-}
-
-select {
-    background-color: #333;
-    color: white;
-    border: 1px solid #555;
-    padding: 10px;
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-
 /* Copyright */
-#copyright {
+footer {
     position: absolute;
-    bottom: 0;
+    bottom: 10px;
     width: 100%;
     text-align: center;
     font-size: 14px;
     color: white;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 
-#copyright p {
-    margin: 0;
+/* Luciérnagas */
+.firefly {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: rgba(255, 255, 0, 0.8);
+    box-shadow: 0 0 10px rgba(255, 255, 0, 1);
+    border-radius: 50%;
+    pointer-events: none;
 }

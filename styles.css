@@ -19,12 +19,12 @@ body {
     text-align: center;
 }
 
-/* Button container (vertical alignment of buttons) */
+/* Navigation buttons container (horizontal alignment) */
 #buttonContainer {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 100px;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+    margin-top: 80px;
 }
 
 button {

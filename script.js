@@ -18,7 +18,7 @@ document.getElementById("serversBtn").addEventListener("click", function() {
 // Launch button: open the selected version's HTML file
 document.getElementById("launchBtn").addEventListener("click", function() {
     var selectedVersion = document.getElementById("versionSelect").value;
-    var filePath = "Versions/" + selectedVersion + ".html";  // Construct file path
+    var filePath = "version/" + selectedVersion + ".html";  // Construct file path
 
     // Open the corresponding version HTML file in a new tab
     window.open(filePath, "_blank");

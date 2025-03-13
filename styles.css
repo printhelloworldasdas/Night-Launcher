@@ -1,7 +1,7 @@
 /* Agregar fuentes personalizadas */
 @font-face {
     font-family: 'MinecraftBoldItalic';
-    src: url('fonts/MinecraftBoldltalic-1y1e.otf') format('opentype');
+    src: url('fonts/MinecraftBoldItalic-1y1e.otf') format('opentype');
 }
 
 @font-face {
@@ -11,7 +11,7 @@
 
 @font-face {
     font-family: 'MinecraftItalic';
-    src: url('fonts/Minecraftltalic-R8Mo.otf') format('opentype');
+    src: url('fonts/MinecraftItalic-R8Mo.otf') format('opentype');
 }
 
 @font-face {
@@ -103,6 +103,7 @@ button:hover {
 label {
     margin-bottom: 10px;
     font-size: 18px;
+    font-family: 'MinecraftItalic', sans-serif; /* Usar la fuente MinecraftItalic para las etiquetas */
 }
 
 select {
@@ -112,6 +113,7 @@ select {
     padding: 10px;
     font-size: 16px;
     margin-bottom: 20px;
+    font-family: 'MinecraftRegular', sans-serif; /* Usar la fuente MinecraftRegular para el selector */
 }
 
 /* Copyright */
@@ -124,6 +126,7 @@ select {
     color: white;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.5);
+    font-family: 'MinecraftItalic', sans-serif; /* Usar la fuente MinecraftItalic para el copyright */
 }
 
 #copyright p {

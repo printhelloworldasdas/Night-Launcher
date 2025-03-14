@@ -42,6 +42,26 @@ body {
     height: 100vh;
 }
 
+/* Texto en la esquina superior izquierda */
+#topLeftText {
+    position: absolute;
+    top: 10px;  /* Ajusta la distancia desde el borde superior */
+    left: 10px; /* Ajusta la distancia desde el borde izquierdo */
+    font-family: 'MinecraftBold', sans-serif;
+    font-size: 16px;  /* Ajusta el tamaño del texto */
+    color: white;
+    cursor: pointer;
+}
+
+#topLeftText a {
+    color: white;
+    text-decoration: none;
+}
+
+#topLeftText a:hover {
+    text-decoration: underline;
+}
+
 /* Título */
 #title {
     width: 100%;
@@ -91,22 +111,33 @@ button:hover {
     display: none;
 }
 
-/* Selector de versión más grande */
-label {
-    margin-bottom: 10px;
-    font-size: 20px;
-    font-family: 'MinecraftItalic', sans-serif;
+/* Sección de noticias */
+#newsSection {
+    width: 80%;
+    max-width: 800px;
+    margin-top: 30px;
 }
 
-select {
-    background-color: #333;
-    color: white;
-    border: 1px solid #555;
-    padding: 15px;
-    font-size: 18px;
+#newsSection h2 {
+    font-size: 30px;
+    text-align: center;
     margin-bottom: 20px;
-    font-family: 'MinecraftRegular', sans-serif;
-    border-radius: 5px;
+}
+
+.newsItem {
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 15px 0;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.newsItem h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.newsItem p {
+    font-size: 18px;
 }
 
 /* Copyright */
@@ -124,37 +155,4 @@ select {
 
 #copyright p {
     margin: 0;
-}
-
-/* 🦋 Logo de Discord en la esquina superior izquierda */
-#discordLogo {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 5px; /* Más pequeño */
-    height: 5px; /* Más pequeño */
-    cursor: pointer;
-}
-
-/* Efecto de luciérnagas */
-.firefly {
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    background-color: yellow;
-    border-radius: 50%;
-    box-shadow: 0 0 10px yellow;
-    pointer-events: none;
-    opacity: 0.8;
-}
-
-/* Efecto de partículas al hacer click */
-.particle {
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    background-color: yellow;
-    border-radius: 50%;
-    box-shadow: 0 0 5px white;
-    pointer-events: none;
 }

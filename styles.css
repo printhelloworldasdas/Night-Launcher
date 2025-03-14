@@ -42,26 +42,6 @@ body {
     height: 100vh;
 }
 
-/* Texto en la esquina superior izquierda */
-#topLeftText {
-    position: absolute;
-    top: 10px;  /* Ajusta la distancia desde el borde superior */
-    left: 10px; /* Ajusta la distancia desde el borde izquierdo */
-    font-family: 'MinecraftBold', sans-serif;
-    font-size: 16px;  /* Ajusta el tamaño del texto */
-    color: white;
-    cursor: pointer;
-}
-
-#topLeftText a {
-    color: white;
-    text-decoration: none;
-}
-
-#topLeftText a:hover {
-    text-decoration: underline;
-}
-
 /* Título */
 #title {
     width: 100%;
@@ -155,4 +135,24 @@ button:hover {
 
 #copyright p {
     margin: 0;
+}
+
+/* Texto en la esquina inferior izquierda */
+#bottomLeftText {
+    position: absolute;
+    bottom: 10px;  /* Ajusta la distancia desde el borde inferior */
+    left: 10px; /* Ajusta la distancia desde el borde izquierdo */
+    font-family: 'MinecraftBold', sans-serif;
+    font-size: 16px;  /* Ajusta el tamaño del texto */
+    color: white;
+    cursor: pointer;
+}
+
+#bottomLeftText a {
+    color: white;
+    text-decoration: none;
+}
+
+#bottomLeftText a:hover {
+    text-decoration: underline;
 }

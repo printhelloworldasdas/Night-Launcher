@@ -5,22 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Night Launcher</title>
 
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Night Launcher">
+    <meta property="og:description" content="🚀 Launch different versions of Eaglercraft with Night Launcher!">
+    <meta property="og:image" content="images/fav.jpg">
+    <meta property="og:url" content="https://yourusername.github.io/your-repository-name/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
     <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="images/fav.jpg">
-
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Título -->
+    <!-- Discord Logo in top left corner -->
+    <a href="https://discord.gg/your-invite-link" target="_blank">
+        <img src="images/discord-logo.png" alt="Discord" id="discordLogo">
+    </a>
+
+    <!-- Title (Image only, no banner) -->
     <div id="title">
         <img src="images/logo.webp" alt="Night Launcher" id="titleImage">
     </div>
 
-    <!-- Contenedor de botones -->
+    <!-- Navigation Buttons -->
     <div id="buttonContainer">
-        <button id="homeBtn">🏠 Home</button>
-        <button id="newsBtn">📰 News</button>
-        <button id="serversBtn">🌐 Servers</button>
+        <button id="homeBtn">Home</button>
+        <button id="newsBtn">News</button>
+        <button id="serversBtn">Servers</button>
+    </div>
+
+    <!-- News Section (hidden by default) -->
+    <div id="newsSection" class="hidden content">
+        <h2>Latest News</h2>
+        <ul>
+            <li>🌟 New version 1.8.8 added to the launcher!</li>
+            <li>🚀 Performance improvements for smoother gameplay.</li>
+            <li>🔥 Fixed bugs in older versions, enjoy a better experience!</li>
+        </ul>
     </div>
 
     <!-- Launcher Section -->
@@ -38,31 +60,9 @@
         <button id="launchBtn">🚀 Launch</button>
     </div>
 
-    <!-- Sección de Noticias -->
-    <div id="newsSection" class="hidden">
-        <h2>Latest News 📰</h2>
-        <div class="newsItem">
-            <h3>Version 0.0.1 Released! 🚀</h3>
-            <p>Our latest update brings a bunch of new features, bug fixes, and performance improvements. Try it out now!</p>
-        </div>
-        <div class="newsItem">
-            <h3>New Server Features 🌐</h3>
-            <p>We have updated our servers with new tools to improve your experience. Join and see what's new!</p>
-        </div>
-        <div class="newsItem">
-            <h3>Follow Us on Social Media 📱</h3>
-            <p>Stay updated with our latest news and releases. Follow us on Twitter, Instagram, and Discord!</p>
-        </div>
-    </div>
-
     <!-- Copyright Footer -->
     <div id="copyright">
         <p>© 2025 Im_Troller. Not affiliated with Mojang Studios or Microsoft.</p>
-    </div>
-
-    <!-- Texto en la esquina inferior izquierda -->
-    <div id="bottomLeftText">
-        <a href="https://your-discord-link.com" target="_blank">Join our Discord 🚀</a>
     </div>
 
     <script src="script.js"></script>

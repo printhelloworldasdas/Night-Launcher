@@ -129,10 +129,10 @@ select {
 /* 🦋 Logo de Discord en la esquina superior izquierda */
 #discordLogo {
     position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 40px;
-    height: 40px;
+    top: 10px;
+    left: 10px;
+    width: 25px; /* Más pequeño */
+    height: 25px; /* Más pequeño */
     cursor: pointer;
 }
 

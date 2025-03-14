@@ -5,34 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Night Launcher</title>
 
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Night Launcher">
-    <meta property="og:description" content="🚀 The ultimate launcher for Eaglercraft! Play multiple versions, check the latest news, and join servers easily.">
-    <meta property="og:image" content="images/fav.jpg">
-    <meta property="og:url" content="https://yourusername.github.io/your-repository-name/">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-
     <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="images/fav.jpg">
+
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Discord Button -->
-    <a href="https://discord.gg/YOUR_SERVER_LINK" target="_blank" id="discordButton">
-        <img src="images/discord-logo.png" alt="Join our Discord">
-    </a>
+    <!-- Texto en la esquina superior izquierda -->
+    <div id="topLeftText">
+        <a href="https://your-discord-link.com" target="_blank">Join our Discord 🚀</a>
+    </div>
 
-    <!-- Title -->
+    <!-- Título -->
     <div id="title">
         <img src="images/logo.webp" alt="Night Launcher" id="titleImage">
     </div>
 
-    <!-- Navigation Buttons -->
+    <!-- Contenedor de botones -->
     <div id="buttonContainer">
-        <button id="homeBtn">Home</button>
-        <button id="newsBtn">News</button>
-        <button id="serversBtn">Servers</button>
+        <button id="homeBtn">🏠 Home</button>
+        <button id="newsBtn">📰 News</button>
+        <button id="serversBtn">🌐 Servers</button>
     </div>
 
     <!-- Launcher Section -->
@@ -46,29 +39,30 @@
             <option value="1.8.8">1.8.8</option>
             <option value="1.12.2">1.12.2</option>
         </select>
-        <button id="launchBtn">Launch</button>
+
+        <button id="launchBtn">🚀 Launch</button>
     </div>
 
-    <!-- News Section -->
-    <div id="newsSection" class="content hidden">
-        <h2>Latest News</h2>
-        <div class="news-card">
-            <h3>Version 0.0.1 Released!</h3>
-            <p>🚀 We are excited to announce the first release of **Night Launcher**! Version 0.0.1 brings the basic functionality to launch multiple game versions, navigate through news, and access online servers.</p>
-            <ul>
-                <li>🔹 Initial launcher setup.</li>
-                <li>🔹 Added version selection (1.2.6 - 1.12.2).</li>
-                <li>🔹 Basic UI with Minecraft-themed design.</li>
-                <li>🔹 Firefly effect for a magical touch.</li>
-                <li>🔹 Particle explosion when clicking.</li>
-            </ul>
-            <p>Stay tuned for future updates! 🎮</p>
+    <!-- Sección de Noticias -->
+    <div id="newsSection" class="hidden">
+        <h2>Latest News 📰</h2>
+        <div class="newsItem">
+            <h3>Version 0.0.1 Released! 🚀</h3>
+            <p>Our latest update brings a bunch of new features, bug fixes, and performance improvements. Try it out now!</p>
+        </div>
+        <div class="newsItem">
+            <h3>New Server Features 🌐</h3>
+            <p>We have updated our servers with new tools to improve your experience. Join and see what's new!</p>
+        </div>
+        <div class="newsItem">
+            <h3>Follow Us on Social Media 📱</h3>
+            <p>Stay updated with our latest news and releases. Follow us on Twitter, Instagram, and Discord!</p>
         </div>
     </div>
 
     <!-- Copyright Footer -->
     <div id="copyright">
-        <p>© 2025 Im_Troller. Night Launcher is not affiliated with Mojang Studios or Microsoft.</p>
+        <p>© 2025 Im_Troller. Not affiliated with Mojang Studios or Microsoft.</p>
     </div>
 
     <script src="script.js"></script>

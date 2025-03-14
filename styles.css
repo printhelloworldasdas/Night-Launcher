@@ -1,21 +1,24 @@
-/* 📌 Fuentes personalizadas usando OTF */
+/* Establecemos las fuentes personalizadas en el CSS */
 @font-face {
     font-family: 'MinecraftRegular';
-    src: url('fonts/MinecraftRegular-Bmg3.otf') format('opentype');
+    src: url('fonts/MinecraftRegular-Bmg3.woff2') format('woff2'),
+         url('fonts/MinecraftRegular-Bmg3.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'MinecraftBold';
-    src: url('fonts/MinecraftBold-nMK1.otf') format('opentype');
+    src: url('fonts/MinecraftBold-nMK1.woff2') format('woff2'),
+         url('fonts/MinecraftBold-nMK1.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'MinecraftItalic';
-    src: url('fonts/MinecraftItalic-R8Mo.otf') format('opentype');
+    src: url('fonts/MinecraftItalic-R8Mo.woff2') format('woff2'),
+         url('fonts/MinecraftItalic-R8Mo.woff') format('woff');
     font-weight: normal;
     font-style: italic;
 }
@@ -29,7 +32,7 @@ body, h1, h2, h3, p, button, label, select {
 body {
     margin: 0;
     padding: 0;
-    background-image: url('images/background.gif'); 
+    background-image: url('images/background.gif');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -91,33 +94,22 @@ button:hover {
     display: none;
 }
 
-/* Sección de noticias */
-#newsSection {
-    width: 80%;
-    max-width: 800px;
-    margin-top: 30px;
-}
-
-#newsSection h2 {
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.newsItem {
-    background-color: rgba(0, 0, 0, 0.6);
-    margin: 15px 0;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.newsItem h3 {
-    font-size: 24px;
+/* Selector de versión */
+label {
     margin-bottom: 10px;
+    font-size: 20px;
+    font-family: 'MinecraftItalic', sans-serif;
 }
 
-.newsItem p {
+select {
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+    padding: 15px;
     font-size: 18px;
+    margin-bottom: 20px;
+    font-family: 'MinecraftRegular', sans-serif;
+    border-radius: 5px;
 }
 
 /* Copyright */
@@ -137,22 +129,34 @@ button:hover {
     margin: 0;
 }
 
-/* Texto en la esquina inferior izquierda */
-#bottomLeftText {
+/* Efecto de luciérnagas */
+.firefly {
     position: absolute;
-    bottom: 10px;  /* Ajusta la distancia desde el borde inferior */
-    left: 10px; /* Ajusta la distancia desde el borde izquierdo */
-    font-family: 'MinecraftBold', sans-serif;
-    font-size: 16px;  /* Ajusta el tamaño del texto */
-    color: white;
-    cursor: pointer;
+    width: 8px;
+    height: 8px;
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 10px yellow;
+    pointer-events: none;
+    opacity: 0.8;
 }
 
-#bottomLeftText a {
-    color: white;
-    text-decoration: none;
+/* Efecto de partículas al hacer click */
+.particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 5px white;
+    pointer-events: none;
 }
 
-#bottomLeftText a:hover {
-    text-decoration: underline;
+/* Discord Logo */
+#discordLogo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: auto;
 }

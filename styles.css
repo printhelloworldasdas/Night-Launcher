@@ -111,7 +111,7 @@ select {
     font-family: 'MinecraftRegular', sans-serif;
     border-radius: 5px;
     cursor: pointer;
-    width: 150px;  /* Ajusto el ancho para que no sea tan largo */
+    width: 100px;  /* Ajusto el ancho para que no sea tan largo */
     text-align: center;
     font-weight: bold;
 }
@@ -172,4 +172,9 @@ select:focus {
     left: 10px;
     width: 40px;
     height: auto;
+    transition: transform 0.3s ease; /* Animación de transición para el zoom */
+}
+
+#discordLogo:hover {
+    transform: scale(1.2); /* Hace el zoom al pasar el cursor */
 }

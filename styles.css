@@ -1,34 +1,31 @@
-/* 📌 Fuentes personalizadas */
+/* 📌 Fuentes personalizadas usando OTF */
 @font-face {
     font-family: 'MinecraftRegular';
-    src: url('fonts/MinecraftRegular-Bmg3.woff2') format('woff2'),
-         url('fonts/MinecraftRegular-Bmg3.woff') format('woff');
+    src: url('fonts/MinecraftRegular-Bmg3.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'MinecraftBold';
-    src: url('fonts/MinecraftBold-nMK1.woff2') format('woff2'),
-         url('fonts/MinecraftBold-nMK1.woff') format('woff');
+    src: url('fonts/MinecraftBold-nMK1.otf') format('opentype');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'MinecraftItalic';
-    src: url('fonts/MinecraftItalic-R8Mo.woff2') format('woff2'),
-         url('fonts/MinecraftItalic-R8Mo.woff') format('woff');
+    src: url('fonts/MinecraftItalic-R8Mo.otf') format('opentype');
     font-weight: normal;
     font-style: italic;
 }
 
-/* 📌 Aplicamos la fuente a los elementos */
+/* Aplicamos la fuente a los elementos */
 body, h1, h2, h3, p, button, label, select {
     font-family: 'MinecraftRegular', sans-serif;
 }
 
-/* 📌 Fondo animado */
+/* Background con GIF */
 body {
     margin: 0;
     padding: 0;
@@ -45,22 +42,7 @@ body {
     height: 100vh;
 }
 
-/* 📌 Logo de Discord */
-#discordLogo {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    transition: transform 0.2s ease-in-out;
-}
-
-#discordLogo:hover {
-    transform: scale(1.1);
-}
-
-/* 📌 Título */
+/* Título */
 #title {
     width: 100%;
     text-align: center;
@@ -72,7 +54,7 @@ body {
     height: 100px;
 }
 
-/* 📌 Contenedor de botones */
+/* Contenedor de botones */
 #buttonContainer {
     display: flex;
     justify-content: center;
@@ -90,15 +72,13 @@ button {
     font-size: 16px;
     border-radius: 5px;
     font-family: 'MinecraftBold', sans-serif;
-    transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
 }
 
 button:hover {
     background-color: #555;
-    transform: scale(1.05);
 }
 
-/* 📌 Contenido */
+/* Contenido */
 .content {
     display: flex;
     justify-content: center;
@@ -111,7 +91,7 @@ button:hover {
     display: none;
 }
 
-/* 📌 Selector de versión */
+/* Selector de versión más grande */
 label {
     margin-bottom: 10px;
     font-size: 20px;
@@ -127,10 +107,9 @@ select {
     margin-bottom: 20px;
     font-family: 'MinecraftRegular', sans-serif;
     border-radius: 5px;
-    cursor: pointer;
 }
 
-/* 📌 Footer */
+/* Copyright */
 #copyright {
     position: absolute;
     bottom: 0;
@@ -147,7 +126,17 @@ select {
     margin: 0;
 }
 
-/* ✨ Efecto de luciérnagas */
+/* 🦋 Logo de Discord en la esquina superior izquierda */
+#discordLogo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+/* Efecto de luciérnagas */
 .firefly {
     position: absolute;
     width: 8px;
@@ -159,7 +148,7 @@ select {
     opacity: 0.8;
 }
 
-/* ✨ Efecto de partículas al hacer clic */
+/* Efecto de partículas al hacer click */
 .particle {
     position: absolute;
     width: 6px;

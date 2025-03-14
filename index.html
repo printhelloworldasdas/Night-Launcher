@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eaglercraft Launcher</title>
+    <title>Night Launcher</title>
 
-    <!-- Open Graph Meta Tags (for Discord link preview) -->
-    <meta property="og:title" content="Eaglercraft Launcher">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Night Launcher">
     <meta property="og:description" content="🚀 The ultimate launcher for Eaglercraft! Play multiple versions, check the latest news, and join servers easily.">
     <meta property="og:image" content="images/fav.jpg">
     <meta property="og:url" content="https://yourusername.github.io/your-repository-name/">
@@ -15,13 +15,17 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/jpeg" href="images/fav.jpg">
-
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Title (Image only, no banner) -->
+    <!-- Discord Button -->
+    <a href="https://discord.gg/YOUR_SERVER_LINK" target="_blank" id="discordButton">
+        <img src="images/discord-logo.png" alt="Join our Discord">
+    </a>
+
+    <!-- Title -->
     <div id="title">
-        <img src="images/logo.webp" alt="Eaglercraft Launcher" id="titleImage">
+        <img src="images/logo.webp" alt="Night Launcher" id="titleImage">
     </div>
 
     <!-- Navigation Buttons -->
@@ -42,13 +46,29 @@
             <option value="1.8.8">1.8.8</option>
             <option value="1.12.2">1.12.2</option>
         </select>
-
         <button id="launchBtn">Launch</button>
+    </div>
+
+    <!-- News Section -->
+    <div id="newsSection" class="content hidden">
+        <h2>Latest News</h2>
+        <div class="news-card">
+            <h3>Version 0.0.1 Released!</h3>
+            <p>🚀 We are excited to announce the first release of **Night Launcher**! Version 0.0.1 brings the basic functionality to launch multiple game versions, navigate through news, and access online servers.</p>
+            <ul>
+                <li>🔹 Initial launcher setup.</li>
+                <li>🔹 Added version selection (1.2.6 - 1.12.2).</li>
+                <li>🔹 Basic UI with Minecraft-themed design.</li>
+                <li>🔹 Firefly effect for a magical touch.</li>
+                <li>🔹 Particle explosion when clicking.</li>
+            </ul>
+            <p>Stay tuned for future updates! 🎮</p>
+        </div>
     </div>
 
     <!-- Copyright Footer -->
     <div id="copyright">
-        <p>© 2025 Im_Troller. Not affiliated with Mojang Studios or Microsoft.</p>
+        <p>© 2025 Im_Troller. Night Launcher is not affiliated with Mojang Studios or Microsoft.</p>
     </div>
 
     <script src="script.js"></script>

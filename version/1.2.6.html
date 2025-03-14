@@ -4,30 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Night Launcher</title>
-    <style>
-        /* Estilos para mostrar el contenido */
-        #contenido {
-            width: 100%;
-            height: 100vh;
-            overflow: auto;
-        }
-    </style>
+    <script type="text/javascript">
+        // Redirige automáticamente a la URL especificada
+        window.location.replace("https://eaglercraft.com/mc/a1.2.6/");
+    </script>
 </head>
 <body>
-
-<div id="contenido"></div>
-
-<script>
-    // Usamos Fetch para obtener el contenido
-    fetch("https://eaglercraft.com/mc/a1.2.6/")
-        .then(response => response.text())  // Obtiene el contenido como texto
-        .then(html => {
-            document.getElementById("contenido").innerHTML = html;  // Inserta el contenido en el div
-        })
-        .catch(error => {
-            console.warn("Error al cargar la página externa:", error);
-        });
-</script>
-
+    <p>Si no eres redirigido automáticamente, <a href="https://eaglercraft.com/mc/a1.2.6/">haz clic aquí</a>.</p>
 </body>
 </html>

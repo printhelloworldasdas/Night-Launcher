@@ -94,7 +94,7 @@ button:hover {
     display: none;
 }
 
-/* Selector de versión */
+/* Selector de versión - estilo igual que los botones */
 label {
     margin-bottom: 10px;
     font-size: 20px;
@@ -105,11 +105,24 @@ select {
     background-color: #333;
     color: white;
     border: 1px solid #555;
-    padding: 15px;
-    font-size: 18px;
+    padding: 15px 25px;
+    font-size: 16px;
     margin-bottom: 20px;
     font-family: 'MinecraftRegular', sans-serif;
     border-radius: 5px;
+    cursor: pointer;
+    width: 200px;
+    text-align: center;
+    font-weight: bold;
+}
+
+select:hover {
+    background-color: #555;
+}
+
+select:focus {
+    outline: none;
+    background-color: #444;
 }
 
 /* Copyright */

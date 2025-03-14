@@ -1,4 +1,4 @@
-/* Establecemos las fuentes personalizadas en el CSS */
+/* 📌 Fuentes personalizadas */
 @font-face {
     font-family: 'MinecraftRegular';
     src: url('fonts/MinecraftRegular-Bmg3.woff2') format('woff2'),
@@ -23,12 +23,12 @@
     font-style: italic;
 }
 
-/* Aplicamos la fuente a los elementos */
+/* 📌 Aplicamos la fuente a los elementos */
 body, h1, h2, h3, p, button, label, select {
     font-family: 'MinecraftRegular', sans-serif;
 }
 
-/* Background con GIF */
+/* 📌 Fondo animado */
 body {
     margin: 0;
     padding: 0;
@@ -45,7 +45,22 @@ body {
     height: 100vh;
 }
 
-/* Título */
+/* 📌 Logo de Discord */
+#discordLogo {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+#discordLogo:hover {
+    transform: scale(1.1);
+}
+
+/* 📌 Título */
 #title {
     width: 100%;
     text-align: center;
@@ -57,7 +72,7 @@ body {
     height: 100px;
 }
 
-/* Contenedor de botones */
+/* 📌 Contenedor de botones */
 #buttonContainer {
     display: flex;
     justify-content: center;
@@ -75,13 +90,15 @@ button {
     font-size: 16px;
     border-radius: 5px;
     font-family: 'MinecraftBold', sans-serif;
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
 }
 
 button:hover {
     background-color: #555;
+    transform: scale(1.05);
 }
 
-/* Contenido */
+/* 📌 Contenido */
 .content {
     display: flex;
     justify-content: center;
@@ -94,7 +111,7 @@ button:hover {
     display: none;
 }
 
-/* Selector de versión más grande */
+/* 📌 Selector de versión */
 label {
     margin-bottom: 10px;
     font-size: 20px;
@@ -110,9 +127,10 @@ select {
     margin-bottom: 20px;
     font-family: 'MinecraftRegular', sans-serif;
     border-radius: 5px;
+    cursor: pointer;
 }
 
-/* Copyright */
+/* 📌 Footer */
 #copyright {
     position: absolute;
     bottom: 0;
@@ -129,7 +147,7 @@ select {
     margin: 0;
 }
 
-/* Efecto de luciérnagas */
+/* ✨ Efecto de luciérnagas */
 .firefly {
     position: absolute;
     width: 8px;
@@ -141,27 +159,13 @@ select {
     opacity: 0.8;
 }
 
-/* Efecto de partículas al hacer click */
+/* ✨ Efecto de partículas al hacer clic */
 .particle {
     position: absolute;
     width: 6px;
     height: 6px;
     background-color: yellow;
     border-radius: 50%;
-    box-shadow: 0 0 15px yellow, 0 0 5px white; /* Resplandor amarillo más intenso */
+    box-shadow: 0 0 5px white;
     pointer-events: none;
-    opacity: 0.9; /* Más opacidad para un mejor efecto */
-    animation: particleMove 1s forwards;
-}
-
-/* Animación de movimiento para las partículas */
-@keyframes particleMove {
-    0% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    100% {
-        transform: scale(0.5);
-        opacity: 0;
-    }
 }

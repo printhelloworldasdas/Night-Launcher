@@ -1,3 +1,34 @@
+/* Establecemos las fuentes personalizadas */
+@font-face {
+    font-family: 'MinecraftRegular';
+    src: url('fonts/MinecraftRegular-Bmg3.woff2') format('woff2'),
+         url('fonts/MinecraftRegular-Bmg3.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MinecraftBold';
+    src: url('fonts/MinecraftBold-nMK1.woff2') format('woff2'),
+         url('fonts/MinecraftBold-nMK1.woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MinecraftItalic';
+    src: url('fonts/MinecraftItalic-R8Mo.woff2') format('woff2'),
+         url('fonts/MinecraftItalic-R8Mo.woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* Aplicamos la fuente a los elementos */
+body, h1, h2, h3, p, button, label, select {
+    font-family: 'MinecraftRegular', sans-serif;
+}
+
+/* Background con GIF */
 body {
     margin: 0;
     padding: 0;
@@ -14,20 +45,19 @@ body {
     height: 100vh;
 }
 
-/* Title */
+/* Título */
 #title {
     width: 100%;
     text-align: center;
     margin-top: 20px;
 }
 
-/* Title image */
 #titleImage {
     width: auto;
     height: 100px;
 }
 
-/* Button container */
+/* Contenedor de botones */
 #buttonContainer {
     display: flex;
     justify-content: center;
@@ -44,13 +74,14 @@ button {
     cursor: pointer;
     font-size: 16px;
     border-radius: 5px;
+    font-family: 'MinecraftBold', sans-serif;
 }
 
 button:hover {
     background-color: #555;
 }
 
-/* Content */
+/* Contenido */
 .content {
     display: flex;
     justify-content: center;
@@ -63,18 +94,35 @@ button:hover {
     display: none;
 }
 
+/* Selector de versión */
 label {
     margin-bottom: 10px;
-    font-size: 18px;
+    font-size: 20px;
+    font-family: 'MinecraftItalic', sans-serif;
 }
 
 select {
     background-color: #333;
     color: white;
     border: 1px solid #555;
-    padding: 10px;
-    font-size: 16px;
+    padding: 12px 20px;
+    font-size: 14px;
     margin-bottom: 20px;
+    font-family: 'MinecraftRegular', sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100px;
+    text-align: center;
+    font-weight: bold;
+}
+
+select:hover {
+    background-color: #555;
+}
+
+select:focus {
+    outline: none;
+    background-color: #444;
 }
 
 /* Copyright */
@@ -87,8 +135,72 @@ select {
     color: white;
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.5);
+    font-family: 'MinecraftItalic', sans-serif;
 }
 
 #copyright p {
     margin: 0;
+}
+
+/* Efecto de luciérnagas */
+.firefly {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 10px yellow;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+/* Efecto de partículas al hacer click */
+.particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 5px white;
+    pointer-events: none;
+}
+
+/* Discord Logo */
+#discordLogo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+#discordLogo:hover {
+    transform: scale(1.2);
+}
+
+/* 🎵 Estilo del reproductor de música */
+#musicPlayer {
+    position: fixed;
+    bottom: 50px; /* Justo encima del copyright */
+    right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#playPauseBtn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#volumeSlider {
+    width: 80px;
+    cursor: pointer;
 }

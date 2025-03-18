@@ -9,7 +9,7 @@
     <meta property="og:title" content="Night Launcher">
     <meta property="og:description" content="🚀 Launch different versions of Eaglercraft with Night Launcher!">
     <meta property="og:image" content="images/fav.jpg">
-    <meta property="og:url" content="https://yourusername.github.io/your-repository-name/">
+    <meta property="og:url" content="https://night-launcher.vercel.app/">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
 
@@ -19,7 +19,7 @@
 </head>
 <body>
     <!-- Discord Logo in top left corner -->
-    <a href="https://discord.gg/RPA2DwWV2X" target="_blank">
+    <a href="https://discord.gg/your-invite-link" target="_blank">
         <img src="images/discord-logo.png" alt="Discord" id="discordLogo">
     </a>
 
@@ -33,6 +33,7 @@
         <button id="homeBtn">Home</button>
         <button id="newsBtn">News</button>
         <button id="serversBtn">Servers</button>
+        <button id="musicBtn">Music</button> <!-- Music Button -->
     </div>
 
     <!-- News Section (hidden by default) -->
@@ -53,21 +54,31 @@
     <div id="launcher" class="content">
         <label for="versionSelect">Select a version:</label>
         <select id="versionSelect">
-            <!-- Vanilla Versions -->
             <option value="1.2.6">1.2.6</option>
             <option value="1.3">1.3</option>
             <option value="1.5.2">1.5.2</option>
             <option value="1.7.3">1.7.3</option>
             <option value="1.8.8">1.8.8</option>
             <option value="1.12.2">1.12.2</option>
-            
-            <!-- PvP Clients -->
-            <option value="PixelClient">PixelClient</option>
-            <option value="Resent">Resent</option>
-            <option value="Astra">Astra</option>
         </select>
 
         <button id="launchBtn">Launch</button>
+    </div>
+
+    <!-- Music Player Section (hidden by default) -->
+    <div id="musicPlayer" class="hidden content">
+        <div id="musicCover">
+            <img src="images/song1-cover.jpg" alt="Song Cover" id="coverImage">
+        </div>
+        <div id="musicInfo">
+            <h3 id="songTitle">Song Title</h3>
+            <input type="range" id="progressBar" value="0" step="1" max="100" />
+        </div>
+        <div id="musicControls">
+            <button id="prevBtn">Previous</button>
+            <button id="playPauseBtn">Play</button>
+            <button id="nextBtn">Next</button>
+        </div>
     </div>
 
     <!-- Copyright Footer -->

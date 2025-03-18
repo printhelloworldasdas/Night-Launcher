@@ -9,7 +9,7 @@
     <meta property="og:title" content="Night Launcher">
     <meta property="og:description" content="🚀 Launch different versions of Eaglercraft with Night Launcher!">
     <meta property="og:image" content="images/fav.jpg">
-    <meta property="og:url" content="https://printhelloworldasdas.github.io/Night-Launcher/">
+    <meta property="og:url" content="https://yourusername.github.io/your-repository-name/">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
 
@@ -53,19 +53,18 @@
     <div id="launcher" class="content">
         <label for="versionSelect">Select a version:</label>
         <select id="versionSelect">
-            <optgroup label="Originals">
-                <option value="1.2.6">1.2.6</option>
-                <option value="1.3">1.3</option>
-                <option value="1.5.2">1.5.2</option>
-                <option value="1.7.3">1.7.3</option>
-                <option value="1.8.8">1.8.8</option>
-                <option value="1.12.2">1.12.2</option>
-            </optgroup>
-            <optgroup label="PvP Clients">
-                <option value="PixelClient.html">Pixel Client</option>
-                <option value="Resent.html">Resent</option>
-                <option value="Astra.html">Astra</option>
-            </optgroup>
+            <!-- Vanilla Versions -->
+            <option value="1.2.6">1.2.6</option>
+            <option value="1.3">1.3</option>
+            <option value="1.5.2">1.5.2</option>
+            <option value="1.7.3">1.7.3</option>
+            <option value="1.8.8">1.8.8</option>
+            <option value="1.12.2">1.12.2</option>
+            
+            <!-- PvP Clients -->
+            <option value="PixelClient">PixelClient</option>
+            <option value="Resent">Resent</option>
+            <option value="Astra">Astra</option>
         </select>
 
         <button id="launchBtn">Launch</button>
@@ -76,15 +75,6 @@
         <p>© 2025 Night Launcher. Not affiliated with Mojang Studios or Microsoft.</p>
     </div>
 
-    <script>
-        document.getElementById("launchBtn").addEventListener("click", function() {
-            var selectedVersion = document.getElementById("versionSelect").value;
-            if (selectedVersion.includes(".html")) {
-                window.location.href = selectedVersion;
-            } else {
-                alert("Launching " + selectedVersion);
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
